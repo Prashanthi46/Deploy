@@ -14,7 +14,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import com.samplerecipe.controller.RecipeController;
-import com.samplerecipe.entity.RecipeEntity;
+import com.samplerecipe.entity.Recipe;
 import com.samplerecipe.exceptions.IdNotFoundException;
 import com.samplerecipe.exceptions.NoDataException;
 import com.samplerecipe.exceptions.NoRecipefoundException;
@@ -27,15 +27,15 @@ public class RecipeTestCases {
 	@Mock
 	RecipeServiceInterface rs;
 	@Mock
-	RecipeEntity re;
+	Recipe re;
 	@Mock
-	RecipeEntity r;
+	Recipe r;
 	
 	@SuppressWarnings("deprecation")
 	@BeforeEach
 	public void startup() {
 		MockitoAnnotations.initMocks(this);
-		r = new RecipeEntity(1, "Chicken 65",true, "Starters", "Bit Spicy", LocalDate.of(2022,05,16), null);
+		r = new Recipe(1, "Chicken 65",true, "Starters", "Bit Spicy", LocalDate.of(2022,05,16), null);
 	}
 	
 	@Test
@@ -53,7 +53,7 @@ public class RecipeTestCases {
 	
 	@Test
 	public void testdeleteRecipe() throws NoDataException {
-		RecipeEntity r1 = new RecipeEntity(1, "Chicken 65",true, "Starters", "Bit Spicy", LocalDate.of(2022,05,16), null);
+		Recipe r1 = new Recipe(1, "Chicken 65",true, "Starters", "Bit Spicy", LocalDate.of(2022,05,16), null);
 		when(rs.deleteRecipe(r1.getRecipeId())).thenReturn("REMOVED");
 		String status = rs.deleteRecipe(1);
 		assertEquals("REMOVED",status);

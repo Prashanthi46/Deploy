@@ -11,10 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-
-
 @Entity
-public class RecipeEntity {
+public class Recipe {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@JsonIgnore
@@ -25,9 +23,9 @@ public class RecipeEntity {
 	String instructions;
 	LocalDate date;
 	 
-	@OneToMany(targetEntity = IngredientsEntity.class, cascade = CascadeType.ALL)
+	@OneToMany(targetEntity = Ingredients.class, cascade = CascadeType.ALL)
 	@JoinColumn(name = "fk", referencedColumnName = "recipeId")
-	 public List<IngredientsEntity> ingredients;
+	 public List<Ingredients> ingredients;
 
 	
 	public int getRecipeId() {
@@ -78,16 +76,16 @@ public class RecipeEntity {
 		this.date = date;
 	}
 
-	public List<IngredientsEntity> getIngredients() {
+	public List<Ingredients> getIngredients() {
 		return ingredients;
 	}
 
-	public void setIngredients(List<IngredientsEntity> ingredients) {
+	public void setIngredients(List<Ingredients> ingredients) {
 		this.ingredients = ingredients;
 	}
 
-	public RecipeEntity(int recipeId, String recipeName, boolean isVeg, String recipeType, String instructions,
-			LocalDate date, List<IngredientsEntity> ingredients) {
+	public Recipe(int recipeId, String recipeName, boolean isVeg, String recipeType, String instructions,
+			LocalDate date, List<Ingredients> ingredients) {
 		super();
 		this.recipeId = recipeId;
 		this.recipeName = recipeName;
@@ -98,7 +96,7 @@ public class RecipeEntity {
 		this.ingredients = ingredients;
 	}
 
-	public RecipeEntity() {
+	public Recipe() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
