@@ -1,0 +1,11 @@
+2022-07-11 12:35:17,221 ERROR com.samplerecipe.controller.RecipeController [http-nio-8087-exec-1] recipe with that Id 11 is not in database
+2022-07-11 12:45:54,908 ERROR com.samplerecipe.controller.RecipeController [http-nio-8087-exec-5] recipe with that Id 11 is not in database
+2022-07-11 12:47:04,667 ERROR com.samplerecipe.controller.RecipeController [http-nio-8087-exec-10] recipe with that Id 17 is not in database
+2022-07-11 12:49:06,119 INFO com.samplerecipe.controller.RecipeController [http-nio-8087-exec-1] Fetch all Recipes from the database
+2022-07-11 12:49:42,493 ERROR com.samplerecipe.controller.RecipeController [http-nio-8087-exec-1] There is no recipe with the Id 21 to delete
+2022-07-11 12:50:09,772 INFO com.samplerecipe.controller.RecipeController [http-nio-8087-exec-2] Successfully deleted the recipe with Id 1
+2022-07-11 12:58:17,652 WARN com.samplerecipe.controller.RecipeController [http-nio-8087-exec-2] i is not used in anywhere
+2022-07-11 12:58:17,652 INFO com.samplerecipe.controller.RecipeController [http-nio-8087-exec-2] Fetch all Recipes from the database
+2022-07-11 13:01:39,150 WARN com.samplerecipe.controller.RecipeController [http-nio-8087-exec-2] i is not used in anywhere
+2022-07-11 13:01:39,150 DEBUG com.samplerecipe.controller.RecipeController [http-nio-8087-exec-2] some msg
+2022-07-11 13:01:39,150 INFO com.samplerecipe.controller.RecipeController [http-nio-8087-exec-2] Fetch all Recipes from the database
